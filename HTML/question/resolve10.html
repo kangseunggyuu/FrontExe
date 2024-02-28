@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resolve10</title>
+    <style>
+        #container {
+            list-style: none;
+            width: 600px;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="">
+            <fieldset>
+            <h1>프론트엔드 개발자 지원서</h1>
+            <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+            <hr>
+            <p>개인정보</p>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                <input type="text" id="name" placeholder="공백없이 입력하세요.">
+                <li>
+                    <label for="tel">연락처</label>
+                    <input type="tel" id="phone">
+
+                </li>
+            </li>
+            </ul>
+            <p>지원분야</p>
+                <ul>
+                    <li><input type="radio" name="check">웹 퍼블리싱</li>
+                    <li><input type="radio" name="check">웹 애플리케이션 개발</li>
+                    <li><input type="radio" name="check">개발 환경 개선</li>
+                </ul>
+            <p>지원동기</p>
+            <textarea name="memo" id="memo" cols="40" rows="4" placeholder="본사 지원 동기를 간략히 써주세요."></textarea>
+        </fieldset>
+        </form>
+        <button>접수하기</button>
+        <button>다시 쓰기</button>
+    </div>
+</body>
+
+</html>
