@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 500px;
+            height: 200px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+        #static{
+            position: static;
+            border: 3px red;
+
+        }
+        #relative-1{
+            position: relative;
+            border: 3px green;
+        }
+        #relative-2{
+            position: relative;
+            left: 100px;
+            top: -50px;
+            border: 3px blue;
+        }
+        #fixed{
+            width: 300px;
+            height: 400px;
+            background: url(../images/cat.jpg);
+            position: fixed;
+            right: 30px;
+            top: 30px;
+        }
+    </style>
+</head>
+<!-- [position]
+    static      : 기본값, 문서의 흐름에 맞춰 배치
+    relative    : static과 동일하지만, 위치값을 지정 가능
+    absolute    : relative를 사용한 상위 요소를 기준으로 위치값을 지정
+    fixed       : 브라우저 창을 기준으로 위치 지정 -->
+<body>
+    <p id="static">Run away, but we're running in circles When I'm away from you</p>
+    <p id="relative-1">Run away, run away, run away</p>
+    <p id="relative-2">Post Malone-Circles</p>
+    <p id="fixed">Youtube Music</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+    <p id=>Run away, but we're running in circles When I'm away from you</p>
+</body>
+</html>

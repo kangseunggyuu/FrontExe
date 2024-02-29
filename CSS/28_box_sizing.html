@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+        .box1{
+            /* 기본 설정은 content-box이다.
+            box-sizing: content-box;
+            아래 크기가 content에 적용된다. */
+            width: 400px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #f00;
+        }
+        .box2{
+            /* border-box는 레이아웃 계산하기가 편리하다.
+            content+padding+border 영역크기가 아래 설정을 적용하기 때문에 */
+            box-sizing: border-box;
+            width: 400px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
