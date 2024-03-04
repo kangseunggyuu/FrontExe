@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            padding: 5px 30px;
+        }
+        li a{
+            font-size:16px;
+            text-decoration: none;
+            color:#000;
+        }
+        /* a요소에서 target속성의 값이 _blank인 요소에 적용*/
+        a[target='_blank']{
+            padding-right:30px;
+            background:url('../images/newwindow.png') no-repeat center right;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a></li>
+        <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+        <li><a href="https://www.w3schools.com/css/css3_mediaqueries.asp">미디어쿼리</a></li>
+    </ul>
+</body>
+</html>

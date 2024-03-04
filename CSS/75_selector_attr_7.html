@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{ list-style:none;}
+        li{ padding: 5px 30px; }
+        li a{
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+        }
+        /* a태그 요소의 href값에 w3라는 글자가 포함되어 있는 요소*/
+        a[href *= 'w3']{
+            background:blue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5 참고 사이트</h1>
+    <P>(아래 링크 중 파란색 배경의 링크는 w3c 사이트로 연결됩니다.)</P>
+    <ul>
+        <li><a href="https://html.spec.whatwg.org/">HTML 표준안 사이트</a></li>
+        <li><a href="https://caniuse.com/">HTML 지원 여부 체크</a></li>
+        <li><a href="https://www.w3schools.com/css/css3_mediaqueries.asp">미디어쿼리</a></li>
+    </ul>
+</body>
+</html>

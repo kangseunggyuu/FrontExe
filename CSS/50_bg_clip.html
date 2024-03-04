@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 범위 정하기</title>
+    <style>
+        .desc{
+            border:  5px dotted #222;
+            background-color: #ffd9a0;
+            width: 350px;
+            padding: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+        #clip-border{
+            background-clip: border-box;
+        }
+        #clip-padding{
+            background-clip: padding-box;
+        }
+        #clip-content{
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 <b>식물 및 열매</b>.</p>
+            <p>이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <em>전혀 관계가 없는</em> 진달래과 식물이다.</p>
+        </div>
+        <div class="desc" id="clip-padding">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 <b>식물 및 열매</b>.</p>
+            <p>이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <em>전혀 관계가 없는</em> 진달래과 식물이다.</p>
+        </div>
+        <div class="desc" id="clip-content">
+            <h1>블루베리</h1>
+            <p>북아메리카를 비롯한 북반구 전역에 분포하는 <b>식물 및 열매</b>.</p>
+            <p>이름과 달리 딸기, 라즈베리, 블랙베리 등의 베리류와는 <em>전혀 관계가 없는</em> 진달래과 식물이다.</p>
+        </div>
+    </div>
+</body>
+</html>
