@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 250px;
+            display: flex;      /* 플렉서블 박스 컨데이터 레이아웃 = 플렉스 레이아웃 */
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            border: 1px solid #222;
+            align-items: center;
+        }
+        p{
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }.box{
+            padding: 5px 45px;
+            margin: 5px;
+            background-color: #222;
+        }
+        #box1{
+            align-self: flex-start;
+        }
+        #box3{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box" id="box1">1<p>1</p></div>
+        <div class="box" id="box2">2<p>2</p></div>
+        <div class="box" id="box3">3<p>3</p></div>
+        <div class="box" id="box4">4<p>4</p></div>
+    </div>
+</body>
+</html>

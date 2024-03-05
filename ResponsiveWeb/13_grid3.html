@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));        /* 화면을 꽉 채우도록 칼럼 자동 늘림 */
+            margin-bottom: 20px;
+        }
+        #wrapper2{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));        /* 칼럼 최소 너비만큼 채워서 표시 */
+        }
+        h1{
+            font-size: 24px;
+        }
+        .items{
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>auto-fit일 때</h1>
+    <div id="wrapper1">
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+    </div>
+
+    <h1>auto-fill일 때</h1>
+    <div id="wrapper2">
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+    </div>
+</body>
+
+</html>

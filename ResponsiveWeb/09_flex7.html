@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 150px;
+            display: flex;      /* 플렉서블 박스 컨데이터 레이아웃 = 플렉스 레이아웃 */
+            flex-flow: row wrap;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            border: 1px solid #222;
+            align-items: center;
+            margin: 30px;
+        }
+        p{
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }.box{
+            width: 80px;
+            background-color: #222;
+            border: 1px dotted #e9e9e9;
+        }
+        /* 주축에서 줄바꿈이 되어 여러 줄로 표현될 때
+        교차축의 알목간의 간격 지정 */
+        #opt1{ align-content: flex-start;}
+        #opt2{ align-content: flex-end;}
+        #opt3{ align-content: center;}
+        #opt4{ align-content: space-between;}
+        #opt5{ align-content: space-around;}
+        #opt6{ align-content: stretch;}
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="container" id="opt6">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 20px auto;
+            width: 100px;
+            height: 100px;
+            /* background-color: #07f; */
+            background-image: url(../images/cat.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid #222;
+            transition-property: width, height;     /* 트랫닞션 대상 - 너비, 높이 */
+            transition-duration: 2s, 1s;        /* 트랜지션 시간 -2초, 1초 */
+        }
+        .box:hover{
+            width: 200px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

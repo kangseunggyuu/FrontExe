@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    모바일 기기를 위한 viewport설정
+    이 설정을 안하면 pc화면의 내용 -> 모바일 화면: 글자가 작아진다.
+
+    viewport 개념 전: px, %
+    viewport 개념 후: px. %
+                     vw: 뷰표트 너비의 1%, ex)100vw: 화면너비와 동일
+                     vw: 뷰표트 높이의 1%
+                     vmin: 뷰포트 너비와 높이 중에서 작은 값의 1%와 같다.
+                     vmax: 뷰포트 너비와 높이 중에서 큰 값의 1%와 같다.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 5vw;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요?</h1>
+</body>
+</html>

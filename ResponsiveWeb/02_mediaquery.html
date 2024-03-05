@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1024보다 큰 경우 */
+        body{
+            background: url(../images/bg0.jpg) no-repeat fixed;
+            background-size: cover;
+        }
+        /* 768 < screen-width <= 1024 */
+        @media screen and (max-width:1024px){
+            body{
+            background: url(../images/bg1.jpg) no-repeat fixed;
+            background-size: cover;
+            }
+        }
+        /* 320 < screen-width <= 768 */
+        @media screen and (max-width:768px){
+            body{
+            background: url(../images/bg2.jpg) no-repeat fixed;
+            background-size: cover;
+            }
+        }
+        /* screen-width <= 320 */
+        @media screen and (max-width:320px){
+            body{
+            background: url(../images/bg3.jpg) no-repeat fixed;
+            background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

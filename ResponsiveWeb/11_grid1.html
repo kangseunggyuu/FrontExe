@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px;
+        }
+        .items{
+            padding: 10px;
+            background-color: #eee;
+        }
+        .items :nth-child(odd){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+        <div class="items">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+    </div>
+</body>
+
+</html>

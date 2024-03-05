@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            display: flex;      /* 플렉서블 박스 컨데이터 레이아웃 = 플렉스 레이아웃 */
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+        }
+        .box{
+            padding: 5px 45px;
+            margin: 5px;
+            width:  80px;
+            background-color: #222;
+        }
+        p{
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    /* 
+    display:flex는 주축과 교차죽이 존재한다.
+    일단 주축을 정해주면 수직방향은 자동으로 교자축이 된다.
+
+    row: 가로를 주축, 좌 -> 우, 기본값
+    row-reverse: 가로를 주축, 우-> 좌
+    column: 세로를 주축, 상 -> 하
+    column-reverse: 세로를 주축, 하 -> 상
+     */
+        #opt1{flex-direction: row;}
+        #opt2{flex-direction: row-reverse;}
+        #opt3{flex-direction: column;}
+        #opt4{flex-direction: column-reverse;}
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+</body>
+</html>

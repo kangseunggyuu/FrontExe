@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 600px;
+            margin: 20px auto;
+        }
+        .origin{
+            width: 100px;
+            height: 100px;
+            margin: 40px;
+            float: left;
+            border: 1px solid black;
+        }
+        .origin > div{
+            width: 100px;
+            height: 100px;
+            /* background-color: orange; */
+            background-image: url(../images/cat.jpg);
+            background-repeat: no-repeat;
+            transition: all 3s;     /* 3초동안 회전하도록 트랜지션 적용 */
+        }
+        #skewx:hover{transform: skewX(55deg);}
+        #skewy:hover{transform: skewY(55deg);}
+        #skewxy:hover{transform: skew(-25deg, -15deg);}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin">
+            <div id="skewx"></div>
+        </div>
+        <div class="origin">
+            <div id="skewy"></div>
+        </div>
+        <div class="origin">
+            <div id="skewxy"></div>
+        </div>
+    </div>
+</body>
+</html>
