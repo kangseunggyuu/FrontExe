@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .origin > div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        #scalex:hover{transform: scalex(2);}
+        #scaley:hover{transform: scaley(1.5);}
+        #scale:hover{transform: scale(0,7);}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin">
+            <div id="scalex"></div>
+        </div>
+        <div class="origin">
+            <div id="scaley"></div>
+        </div>
+        <div class="origin">
+            <div id="scale"></div>
+        </div>
+    </div>
+</body>
+</html>
