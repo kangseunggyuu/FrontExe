@@ -1,0 +1,45 @@
+
+/* 공통 부분 */
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "나눔고딕", NaumGothic, "맑은고딕", MalgunGothic, "Apple SD Gothic Neo", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* HEADER 부분 */
+
+.logo{
+    width: 210px;
+    margin-top: 14px;
+}
+.main-nav{
+    display: flex;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left: 36px;
+}
+.main-nav a{
+    color: #432;
+}
+.main-nav a:hover{
+    color: #0bd;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}

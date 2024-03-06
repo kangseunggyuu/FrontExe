@@ -1,0 +1,349 @@
+
+/* 공통 부분 
+-----------------------------------------*/
+
+html{
+    font-size:100%;
+}
+body{
+    font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "Apple SD Gothic Neo", sans-serif;
+    line-height:1.7;
+    color:#432;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width:100%;
+}
+
+
+/* HEADER
+--------------------------------------- */
+.logo{
+    width:210px;
+    margin-top:14px;
+}
+
+.main-nav{
+    display:flex;  /* nav메뉴가 수평이 되도록*/
+    font-size:1.25rem;
+    text-transform:uppercase;
+    margin-top:34px;
+    list-style:none;
+}
+.main-nav li{
+    margin-left:36px;
+}
+.main-nav a{
+    color:#432;
+}
+.main-nav a:hover{
+    color:#0bd;
+}
+
+.page-header{
+    display:flex;        /*로고와 nav메뉴가 수평이 되도록*/
+    justify-content: space-between; /*로고와 nav메뉴를 양끝으로 붙여주고 가운데 공간*/
+}
+
+.wrapper{
+    max-width:1100px;   /* 최대크기를 pc에서도 잘 보이도록 적절하게 지정*/
+    margin:0 auto;      /* 좌우의 중앙에 배치*/
+    padding: 0 4%;      /* 스마트폰에서 잘 보이도록 여백 지정*/
+}
+
+/* HOME
+-------------------------------------- */
+.home-content{
+    text-align:center;
+    margin-top:10%;
+}
+.home-content p {
+    font-size:1.125rem;
+    margin:10px 0 42px;
+}
+
+/* 제목 */
+.page-title{
+    font-size:5rem;
+    font-family: 'Philosopher', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* 버튼 */
+.button{
+    font-size:1.375rem;
+    background:#0bd;
+    color:#fff;
+    border-radius:5px;
+    padding:18px 32px;
+}
+.button:hover{
+    background:#0090aa;
+}
+
+/* 큰 배경 이미지*/
+.big-bg{
+    background-size:cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#home{
+    /* 1) 배경 이미지 설정 */
+    /* background-image:url('../../../siteimages/main-bg.jpg'); */
+    
+
+    /* 2) 배경 이미지와 색상 블렌딩*/
+    /* background-color: #393;
+    background-blend-mode: hard-light; */
+
+    /* 3) 그레디언트 색상 */
+    /* 위의 이미지를 그레디언트로 덮었다 */
+    /* background-image:linear-gradient(#c9ffbf, #ffafbd); */
+
+    /* 4) 배경이미지와 그레디언트 블렌딩 */
+    background-image:url('../../../siteimages/main-bg.jpg'), linear-gradient(#c9ffbf, #ffafbd);
+    background-blend-mode: luminosity;
+
+    min-height:100vh;
+}
+#home .page-title{
+    text-transform: none;
+}
+
+/* NEWS
+------------------------------------ */
+#news{
+    background-image: url('../../../siteimages/news-bg.jpg');
+    height:270px;
+    margin-bottom:40px;
+}
+#news .page-title{
+    text-align:center;
+}
+
+/* footer
+--------------------------------------- */
+footer{
+    background:#432;
+    text-align:center;
+    padding:26px 0;
+}
+footer p{
+    color:#fff;
+    font-size:0.875rem;
+}
+
+/* news-contents의 메인기사와 사이드바를 수평으로 배열한다 */
+.news-contents{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:50px;
+}
+
+/* news-contents의 메인기사와 사이드바의 크기 설정 */
+article{
+    order:2;        /* display:flex에서 동작하는 속성, 배치 순서*/
+    width:60%;
+}
+aside{
+    order:3;
+    width:22%;
+}
+.ad{
+    order:1;
+}
+
+.post-info{
+    position:relative;      /*이 요소의 자식에 absolute속성을 부여하면 현재 이 요소를 기준으로 위치를 정할 수 있다*/
+    padding-top: 4px;
+    margin-bottom:40px;
+}
+
+.post-date{    
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:#0bd;
+    border-radius:50%;
+    color:#fff;
+    font-size:1.625rem;
+    text-align:center;
+    top:0;
+    padding-top:10px;
+}
+
+.post-date span{
+    font-size:1rem;
+    border-top:1px rgba(255,255,255,.5) solid;      /*날짜위의 반투명 수평선*/
+    padding-top:6px;
+    display:block;
+    width:60%;
+    margin:0 auto;
+}
+
+.post-title{
+    font-family:"나눔명조", nanummyeongjo, serif;
+    font-size:1.6rem;
+    font-weight: bold;
+}
+
+.post-title, 
+.post-cat{
+    margin-left:120px;
+}
+
+article img{
+    margin-bottom:20px;
+}
+article p{
+    margin-bottom:1rem;
+}
+
+/* 사이드바
+--------------------------- */
+.sub-title{
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;      /* 아래에 선을 설정*/
+    font-weight: normal;
+}
+
+aside p{
+    padding: 12px 10px;
+}
+
+.sub-menu{
+    margin-bottom:60px;
+    list-style: none;
+}
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+}
+.sub-menu a{
+    color:#432;
+    padding:10px;
+    display:block;      /* 링크로 클릭할 수 있는 범위를 넓혀줌*/
+}
+.sub-menu a:hover{
+    color:#0bd;
+}
+
+/* MENU
+---------------------------------------------- */
+#menu{
+    background-image: url('../../../siteimages/menu-bg.jpg');
+    min-height: 100vh;
+}
+.menu-content{
+    max-width:560px;
+    margin-top:10%;
+}
+.menu-content .page-title{
+    text-align:center;
+}
+.menu-content p{
+    font-size: 1.125rem;
+    margin: 10px 0 0;
+}
+
+/* MENU grid
+---------------------------------------- */
+.grid{
+    display:grid;
+    gap: 26px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, minmax(240px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.big-box{
+    grid-column: 1/3;
+    grid-row:1/3;
+}
+
+
+
+
+/* 0~600px사의의 화면일 때 적용 */
+@media (max-width: 600px){
+
+    /*1) 모바일 화면에서 문자크기와 여백 조정*/
+    .page-title{
+        font-size:2.5rem;
+    }
+
+    /*2) 헤더의 로고와 nav메뉴를 수직으로 정렬*/
+    .page-header{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    /*1) 모바일 화면에서 문자크기와 여백 조정*/
+    /* HEADER */
+    .main-nav{
+        font-size: 1rem;
+        margin-top:10px;
+    }
+    .main-nav li{
+        margin: 0 20px;
+    }
+
+    /* HOME */
+    .home-content{
+        margin-top: 20%;
+    }
+
+    /* 3) 메인 영역의 article과 aside를 수평->수직으로 정렬 변경 */
+    /* NEW */
+    .news-contents{
+        flex-direction: column;
+    }
+
+    article,
+    aside{
+        width:100%;
+    }
+
+    /* 4) article과 aside의 문자 크기와 여백 조정 */
+    #news .page-title{
+        margin-top: 30px;
+    }
+    aside{
+        margin-top: 60px;
+    }
+    .post-info{
+        margin-bottom: 30px;
+    }
+    .post-date{
+        width:70px;
+        height:70px;
+        font-size:1rem;
+    }
+    .post-date span{
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title{
+        font-size: 1.375rem;
+    }
+    .post-cat{
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,
+    .post-cat{
+        margin-left: 80px;
+    }
+
+    /* MENU */
+    .menu-content{
+        margin-top:20%;
+    }
+}

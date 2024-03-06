@@ -23,33 +23,37 @@
         #ex .ease{
             transition-duration: 3s;
             transition-timing-function: ease;
-            /* transition:3s ease; */
+            /* 기본값: ease는 느리게 시작하여 점점 빨라졌다가 느려지면서 종료 */
         }
         #ex .linear{
             transition-duration: 3s;
             transition-timing-function: linear;
+            /* 시작부터 종료까지 일정하게 */
         }
         #ex .ease-in{
             transition-duration: 3s;
             transition-timing-function: ease-in;
+            /* 느리게 시작한 후 일정한 속도에 다다르면 그 상태로 서서히 */
         }
         #ex .ease-out{
             transition-duration: 3s;
             transition-timing-function: ease-out;
+            /* 빠르게 시작해서 점점 느려짐 */
         }
         #ex .ease-in-out{
             transition-duration: 3s;
             transition-timing-function: ease-in-out;
+            /* 느리게 시작하여 빨라지다가 느려지면서 종료 */
         }
     </style>
 </head>
 <body>
     <div id="ex">
-        <div class="ease">ease</div>
-        <div class="linear">linear</div>
-        <div class="ease-in">ease-in</div>
-        <div class="ease-out">ease-out</div>
-        <div class="ease-in-out">ease-in-out</div>
+        <div class="ease">ease</div>        
+        <div class="linear">linear</div>  
+        <div class="ease-in">ease-in</div>      
+        <div class="ease-out">ease-out</div>        
+        <div class="ease-in-out">ease-in-out</div>      
     </div>
 </body>
 </html>
