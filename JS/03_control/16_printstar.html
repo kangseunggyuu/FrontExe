@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        3을 입력하면
+        *
+        **
+        ***
+        
+        5를 입력하면
+        *
+        **
+        ***
+        ****
+        *****
+        */
+
+        const num0 = prompt('숫자를 입력하세요.', 0);
+
+        for(let i=1; i<=num0; i++){
+            for(let j=0; j<i; j++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

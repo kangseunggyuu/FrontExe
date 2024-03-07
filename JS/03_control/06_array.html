@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const str = '안녕하세요';
+        console.log(str[2]);
+
+        const nameArr = ['홍길동', '임꺽정', '장길산', '일지매', '차돌바위', '머털이', 'alex', 'alert', 'james'];
+        console.log('배열의 길이: ' + nameArr.length);
+        console.log(nameArr);
+        console.log(nameArr[3]);
+        nameArr.push('Henry');
+        console.log(nameArr);
+        nameArr[20] = 'g.o.a.t'
+        console.log(nameArr);
+
+        const array = [3.14, '홍길동', 10, ['a', 'b', 'c']];
+        console.log(array);
+        array[array.length] = '사과';       // push처럼 가장 뒤에 추가
+        array[array.length] = '귤';
+
+        array.splice(2, 1);     // 인덱스 2위치에서 1개 제거
+        console.log(array);
+
+        console.log('홍길동의 위치는 ' + array.indexOf('홍길동'));      // 특정 값의 인덱스 위치
+
+        const fruits = ['사과', '배', '바나나', '귤'];
+        fruits.splice(1, 0, '수박');        // 인덱스 1의 위치에 '수박' 추가하기
+        console.log(fruits);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

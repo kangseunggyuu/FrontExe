@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMcontentLoaded', () => {
+            // const button = document.getElementById('btnStart');
+            const button = document.querySelector(`#btnStart`);
+            button.addEventListener('click', () => {
+                // parentInt: int형 변환
+                // parseFloat: float형 변환
+                const luckyVal = parseInt(Math.random() * 10 + 1);        // 1 ~ 10의 난수
+                console.log(luckyVal);
+                switch (luckyVal) {
+                    case 3:
+                        console.log('냉장고 당첨');
+                        break;
+                    case 5:
+                        console.log('세탁기 당첨');
+                        break;
+                    case 7:
+                        console.log('맥북 당첨');
+                        break;
+                    default:
+                        console.log('팡');
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnStart">추첨</button>
+</body>
+
+</html>

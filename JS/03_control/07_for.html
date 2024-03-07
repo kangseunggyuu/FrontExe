@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const todos = ['우유 구매', '업무 매일 확인하기', '필라테스 수업'];
+
+        for(const i in todos){
+            console.log(`${1}번째 할 일: ${todos[i]}`);
+        }
+
+        for(const todo of todos){
+            console.log(`오늘의 할 일: ${todo}`);
+        }
+
+        for(let i=0;i<todos.length;i++){
+            console.log(`${i}번째 할 일: ${todos}`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
