@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드: ' + e.keyCode);
+                switch (e.keyCode) {
+                    case 37:
+                        console.log('방향키 좌 입력');
+                        break;
+                    case 39:
+                        console.log('방향키 우 입력');
+                        break;
+                    case 38:
+                        console.log('방향키 상 입력');
+                        break;
+                    case 40:
+                        console.log('방향키 하 입력');
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

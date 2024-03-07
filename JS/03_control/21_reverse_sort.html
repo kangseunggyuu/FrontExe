@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.image-container{
+            position: relative;
+        }
+        div.image-container img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 120px;
+        }
+        #btnStart{
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $button = document.querySelector(`#btnStart`);
+
+            const inintX = 100;
+            const inintY = 100;
+            const offsetX = 150;
+
+            $button.addEventListener('click', () => {
+                let $imageContainer = document.querySelector('.image-container');
+                let len = $imageContainer.children.length;
+                for(let i=0; i<len; i++){
+                    let $img = $imageContainer.children[len-i-1];
+                    let left = inintX + (i*offsetX);
+                    $img.style.left = left + 'px';
+                    $img.style.top = inintY + 'px';
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btnStart">정렬 시작</button>
+    </div>
+    <div class="image-container">
+        <img src="../../banners/1.png">
+        <img src="../../banners/2.png">
+        <img src="../../banners/3.png">
+        <img src="../../banners/4.png">
+        <img src="../../banners/5.png">
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*
+숫자 7을 입력하면
+       * 1개
+      *** 3개
+     ***** 5개
+    ******* 7개
+   ********* 9개
+  *********** 11개
+ ************* 13개
+*/
+
+        const num = prompt('숫자를 입력하세요', 0);
+
+        for(let i=1; i<=num; i++){
+            for(let j = num - i; j > 0; j--) {
+                document.write("&nbsp;");
+            }for(let k=1;k<=9;k++)
+            for(let k=1; k<=(i*2)-1; k++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

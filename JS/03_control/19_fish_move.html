@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // const $fish = document.querySelector('#fish');
+            const $fish = document.getElementById('fish');
+            let x = 50;
+            let y = 200;
+            const LEFT_KEY = 37;
+            const RIGHT_KEY = 39;
+            const UP_KEY = 38;
+            const DOWN_KEY = 40;
+            const move_val = 10;
+            const panel_width = 500;
+            const panel_height = 500;
+            const fish_width = 120;
+            const fish_height = 70;
+
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드:' + e.keyCode);
+                switch (e.keyCode) {
+                    case LEFT_KEY:                // 좌
+                        x -= move_val;
+                        break;
+                    case RIGHT_KEY:                // 우
+                        x += move_val;
+                        break;
+                    case UP_KEY:                     // 상
+                        y -= move_val;
+                        break;
+                    case DOWN_KEY:                // 하
+                        y += move_val;
+                        break;
+                }
+
+                // style의 left값 가져오기
+                /*
+                let _left = $fish.style.left;
+                console.log('fish left=' + _left);
+                _left = _left.replace('px', '');    // px글자 제거
+                console.log('fish left=' + _left);
+                console.log('_left type=' + typeof(_left));
+                _left = Number(_left);
+                console.log('_left type=' + typeof(_left));
+                */
+                // panel영역을 벗어나지 못하도록 제약
+                if (x < 0)
+                    x = 0;
+                else if (x > panel_width - fish_width)
+                    x = panel_width - fish_width;
+
+                if (y < 0)
+                    y = 0;
+                else if (y > panel_height - fish_height)
+                    y = panel_height - fish_height;
+
+                // 물고기 위치 이동
+                console.log(`fish 위치 : x=${x}, y=${y}`);
+                $fish.style.left = x + 'px';
+                $fish.style.top = y + 'px';
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../../images2/fish.png" id="fish">
+    </div>
+</body>
+
+</html>

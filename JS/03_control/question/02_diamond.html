@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+                숫자 7을 입력하면
+                        * 
+                       ***
+                      *****
+                     *******
+                      *****
+                       ***
+                        *
+        */
+        const num = prompt('숫자를 입력하세요', 0);
+
+        for(let i=parseInt(num/2); i>=parseInt(-(num/2)); i--){
+            for(let j=1;j<=num;j++){
+                if(j>Math.abs(i)&&j<=num-Math.abs(i))
+                    document.write("*");
+                else
+                    document.write("&nbsp;");
+            }
+            document.write("<br>")
+        }
+        
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
