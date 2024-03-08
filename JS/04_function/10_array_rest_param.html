@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function min(first, ...rests) {
+            let min;
+            let items;
+
+            // first인자가 배열이니?
+            if (Array.isArray(first)) {
+                min = first[0];
+                items = first;
+            } 
+            // first인자가 number 타입이니?
+            else if (typeof (first) === 'number') {
+                min = first;
+                items = rests;
+            }
+
+            // 최소값 찾는 로직
+            for (const item of items) {
+                if (min > item)
+                    min = item;
+            }
+
+            return min;            
+        }
+
+        console.log(`min(배열): ${min([32, 77, 10, 5, 100])}`);
+        console.log(`min(숫자, ...): ${min(32, 77, 10, 5, 100)}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

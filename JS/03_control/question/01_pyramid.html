@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-/*
-숫자 7을 입력하면
-       * 1개
-      *** 3개
-     ***** 5개
-    ******* 7개
-   ********* 9개
-  *********** 11개
- ************* 13개
-*/
+        /*
+        숫자 7을 입력하면
+               * 1개
+              *** 3개
+             ***** 5개
+            ******* 7개
+           ********* 9개
+          *********** 11개
+         ************* 13개
+        */
 
         const num = prompt('숫자를 입력하세요', 0);
 
-        for(let i=1; i<=num; i++){
-            for(let j = num - i; j > 0; j--) {
+        for (let i = 1; i <= num; i++) {
+            for (let j = num - i; j > 0; j--) {
                 document.write("&nbsp;");
-            }for(let k=1;k<=9;k++)
-            for(let k=1; k<=(i*2)-1; k++){
-                document.write('*');
-            }
+            } for (let k = 1; k <= 9; k++)
+                for (let k = 1; k <= (i * 2) - 1; k++) {
+                    document.write('*');
+                }
             document.write('<br>');
         }
-        
+
+
+        // 강사님 ver.
+        let num0 = Number(prompt('숫자입력', 7));
+        let output = " ";
+
+        let w_line = 2 * num0 - 1;                   // 제일 바닥의 별 개수
+        console.lo('w_line= ' + w_line);
+        let mid_pos = parseInt(w_line / 2);       // 소주점을 없애면 중앙 위치 얻기
+        console.log('mid_pos= ' + mid_pos);
+
+        let w_star = 0;                         // 1칸 내려 갈때마다 가운데 중심에서 얼마만큼 별을 더 찍을지
+        for (let i = 0; i < num0; i++) {
+            for (let j = 0; j < w_line; j++) {
+                if (j >= mid_pos - w_star && j <= mid_pos + w_star)
+                    output += '*';
+                else
+                    output += ' ';
+            }
+
+            output += '\n';
+            w_star++;
+        }
+
+        console.log(output);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

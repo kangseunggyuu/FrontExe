@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #999;
+            position: relative;
+        }
+
+        #bar {
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 20px;
+            background: #f30;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+
+        #nav {
+            margin-top: 20px;
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $fish = document.querySelector('#fish');
+            let $button = document.querySelector('#btnStart');
+            const MOVE_VAL = 50;
+            let step = MOVE_VAL;
+            const MAX_X = 430;
+            const MIN_X = 50;
+            let isStart = false;
+
+            $button.addEventListener('click', () => {
+                let x = $fish.getBoundingClientRect().left + step;
+
+                if (x >= MAX_X) {
+                    x = MAX_X;
+                    $fish.setAttribute('src', '../../../images2/fish2.png');
+                    step = -MOVE_VAL;
+                } 
+                else if (x < MIN_X) {
+                    x = MIN_X;
+                    $fish.setAttribute('src', '../../../images2/fish1.png');
+                    step = MOVE_VAL;
+                }
+
+                $fish.style.left = x + 'px';
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../../../images2/fish1.png" id="fish">
+        <div id="bar"></div>
+    </div>
+    <div id="nav">
+        <button id="btnStart">시작</button>
+        <button id="btnStop">멈춤</button>
+    </div>
+</body>
+
+</html>
+
+<!-- move_fish에서 button을 2개 생성
+1개는 '시작' 버튼
+1개는 '멈춤' 버튼
+
+'시작' 버튼을 누르면 물고기가 자동으로 왕복으로 움직이도록
+'멈춤' 버튼을 누르면 물고기가 멈추도록 -->

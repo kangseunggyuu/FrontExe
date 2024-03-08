@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 전개 연산자
+        function funcA(x) {
+            console.log(x);
+        }
+        // 가변인자로 매개변수를 받겠다.
+        function min(...x) {
+            let _min = x[0];
+
+            for (const num of x) {
+                if (_min > num)
+                    _min = num;
+            }
+
+            return _min;
+        }
+
+        // const array = [1, 2, 3];
+        // funcA(array);
+        // console.log(' ');
+        // funcA(1, 2, 3);
+
+        const array = [17, 9, 2, 1, 8]
+        console.log(min(array));        // 1개의 parameter가 전달됨(배열 객채 1개)
+        console.log(' ');
+        console.log(min(...array));     // 전개 연산자(배열을 가변 parameter로 전개해라)
+        console.log(' ');
+        console.log(min[17, 9, 2, 1, 8]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 배열을 입력 받아서 최소값을 리턴하는 함수
+        function min(array) {
+            let min = array[0];
+
+            for (let item of array) {
+                if (min > item)
+                    min = item;
+            }
+
+            return min;
+        }
+
+        const testArray = [52, 273, 99, 1, 28, 3];
+        console.log(`최소값 = ${min(testArray)}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

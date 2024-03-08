@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numbers = [23, 22, 15, 78, 9, 98];
+
+        numbers.forEach(function(value){
+            console.log(value);     // value 값만 받고 싶을 때
+        });
+
+        numbers.forEach(function(value, index){
+            console.log(value + ' ' + index);     // value, index 값 받고 싶을 때
+        });
+
+        numbers.forEach(function(value, index, array){
+            console.log(value + ' ' + index + ' ' + array);     // value, index, array 값 받고 싶을 때
+        });
+
+        const nums1 = numbers.map(function(value){
+            return value / 2;
+        });
+
+        const nums2 = numbers.map(function(value){
+            return value + 100;
+        });
+
+        nums1.forEach(console.log);
+        nums2.forEach(console.log);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -18,16 +18,39 @@
         */
         const num = prompt('숫자를 입력하세요', 0);
 
-        for(let i=parseInt(num/2); i>=parseInt(-(num/2)); i--){
-            for(let j=1;j<=num;j++){
-                if(j>Math.abs(i)&&j<=num-Math.abs(i))
+        for (let i = parseInt(num / 2); i >= parseInt(-(num / 2)); i--) {
+            for (let j = 1; j <= num; j++) {
+                if (j > Math.abs(i) && j <= num - Math.abs(i))
                     document.write("*");
                 else
                     document.write("&nbsp;");
             }
             document.write("<br>")
         }
+
+        // 강사님 ver.
+        let num0 = Number(prompt('숫자 입력', 7));
+        let output = ' ';
+
+        let mid_pos = parseInt(num / 2);
+        console.log('mid_pos= ' + mid_pos);
+
+        let w_star = 0;
+        for (let i = 0; i < num0; i++) {
+            for (let j = 0; j < num0; j++) {
+                if (j >= mid_pos - w_star && j <= mid_pos + w_star)
+                    output += '*';
+                else output += ' ';
+            }
+
+            if (i < mid_pos)
+                w_star++;
+            else
+                w_star--;
+            output += '\n';
+        }
         
+        console.log(output);
     </script>
 
 </head>

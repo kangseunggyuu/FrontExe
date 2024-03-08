@@ -1,0 +1,70 @@
+<!-- 
+버튼을 누르면 0.1초마다 1씩 증가하도록 상자에 표시하고
+다시 버튼을 누르면 타이머가 멈춥니다.
+또 다시 누르면 타이머도 동작합니다.
+
+그리고 처음에는 버튼에 '시작'이라고 표시하고
+타이머가 동작하면 '멈춤'이라고 변경하세요.
+타이머가 다시 중지되면 '시작'이라고 표시하면 됩니다. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output{
+            width:200px;
+            height:200px;
+            border:4px solid black;
+            margin:50px;
+            font-size:100px;
+            text-align: center;
+            line-height: 200px;
+            vertical-align: middle;
+        }
+        #btnStart{
+            width:140px;
+            height:100px;
+            margin:50px;
+            font-size:50px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $output = document.querySelector('#output');
+            let $button = document.querySelector('#btnStart');
+            let count = 0;              // 증가 숫자
+            let timerID = null;         // 타이머 핸들
+            let isStart = false;        // 시작/멈춤 여부
+            const INTERVAL = 100;       // 타이머 주기
+
+            $button.addEventListener('click', () => {
+                if(isStart){
+                    clearInterval(timerID);
+                    timerID = null;
+                    $button.textContent = '시작';
+                }else{
+                    startTimer();
+                    $button.textContent = '멈춤';
+                }
+                isStart = !isStart;
+            });
+
+            function startTimer(){
+                if(timerID == null){
+                    timerID = setInterval(() => {
+                        $output.textContent = ++count;
+                    }, INTERVAL);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+    <div id="output">0</div>
+</body>
+</html>

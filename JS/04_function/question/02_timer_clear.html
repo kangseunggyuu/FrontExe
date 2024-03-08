@@ -1,0 +1,46 @@
+<!-- 
+숫자가 0.1초마다 1씩 증가하는데
+버튼을 누르면 타이머가 멈추도록 작성하세요 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output{
+            width:200px;
+            height:200px;
+            border:4px solid black;
+            margin:50px;
+            font-size:100px;
+            text-align: center;
+            line-height: 200px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $button = document.querySelector('#btnStop');
+            let $output = document.querySelector('#output');
+            let count = 0;          // 숫자 증가
+            let timerID = null;     // 타이머 id
+            const INTERVAL = 100;
+
+            timerID = setInterval(()=> {
+                $output.textContent = ++count;
+            }, INTERVAL);
+
+            $button.addEventListener('click', () => {
+                clearInterval(timerID);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnStop">멈춤</button>
+    <div id="output">0</div>
+</body>
+</html>

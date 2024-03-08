@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1초 후에 1번만 실행되는 함수
+        setTimeout(() => {
+            console.log('3초 후에 실행됩니다.');
+        }, 3000);
+
+        // 1초 간격으로 계속 실행되는 함수
+        let count = 0;
+        setInterval(() => {
+            console.log(`1초마다 실행됩니다.(${count}번째)`);
+            count++;
+        }, 1000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

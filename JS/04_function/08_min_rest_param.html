@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function min(...items){
+            let min = items[0];
+            for(const item of items){
+                if(min > item)
+                    min = item;
+            }
+            return min;
+        }
+
+        console.log(min(25, 22, 788, 12, 3, 99));
+        console.log(min(25, 22, 788, 12, 3, 99, 2, 77, 100));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
