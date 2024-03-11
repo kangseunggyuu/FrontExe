@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aaa = '홍길동';
+
+        // let은 함수와 블록 모두 지역변수의 특징을 가지므로
+        // 지역을 벗어나면 소멸되게 된다. let > var
+        {
+            let aaa = '임꺽정';
+            console.log(aaa);
+        }
+
+        console.log(aaa);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* var변수와 function을 사용한 선언적 함수는 다른 실행 코드에 우선해서
+        최초에 메모리에 로딩하게 된다.
+        이것을 '호이스팅'이라고 한다.(끌어올린다.)
+        
+        프로그래밍의 순서의 혼한을 가져오므로 var => let, const를 권장한다.
+        */
+
+        var aaa = 10;
+        console.log(aaa);
+
+        var aaa = '홍길동';     // 위의 10을 덮어써버린다.
+        console.log(aaa);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

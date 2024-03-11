@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-menu {
+            list-style: none;
+            height: 80px;
+        }
+
+        .tab-menu li {
+            width: 99px;
+            height: 40px;
+            background-position-y: 0px;
+            /* 현재 배경 이미지의 위치를 0으로 변경한다. */
+            text-indent: -1000px;
+            /* 글자를 왼쪽 -1000 위치에 놓는다(안보이게 감춘다) */
+            overflow: hidden;
+            /* 영역을 벗어나면 안보이도록 한다. */
+            display: inline-block;
+            float: left;
+        }
+
+        .tab-menu li:hover {
+            background-position-y: -40px;
+            /* 현재 배경 이미지의 위치를 -40px으로 정한다. */
+        }
+
+        .tab-menu li.select {
+            background-position-y: -80px;
+            /* 해당 li 선택했을 때 동적으로  select 클래스를 추가한 후 적용되는 스타일 */
+            height: 80px;
+        }
+
+        .tab-menu li.menuitem1 {
+            background-image: url(../../images2/newbtn.bar.1.png);
+        }
+
+        .tab-menu li.menuitem2 {
+            background-image: url(../../images2/newbtn.bar.2.png);
+        }
+
+        .tab-menu li.menuitem3 {
+            background-image: url(../../images2/newbtn.bar.3.png);
+        }
+
+        .tab-menu li.menuitem4 {
+            background-image: url(../../images2/newbtn.bar.4.png);
+        }
+
+        .tab-menu li.menuitem5 {
+            background-image: url(../../images2/newbtn.bar.5.png);
+        }
+
+        .tab-menu li.menuitem6 {
+            background-image: url(../../images2/newbtn.bar.6.png);
+        }
+    </style>
+    <script>
+        let tabMenu = function (selector) {
+            let $selectMenuItem = null;     // 선택된 11항목을 저장하기 위한 용도
+
+            // '선택자'에 해당하는 전체 리스트 추출
+            let $selectList = document.querySelectorAll(selector);
+
+            for (let $selector of $selectList) {
+                $selector.addEventListener('click', function (e) {
+                    // li중에 선택 항목이 있고, 그 항목이 select라는 클래스를 가지고 있다면
+                    // 기존 선택 항목에 있는 'select' 클래스를 제거한다.
+                    if ($selectMenuItem !== null && $selectMenuItem.classList.contains('select'))
+                        $selectMenuItem.classList.remove('select');
+
+                    // 현재 클릭해서 선택한 li요소를 저장한다.
+                    $selectMenuItem = e.currentTarget;
+                    //  선택 항목에 동적으로 select 클래스를 삽입한다.
+                    $selectMenuItem.classList.add('select');
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            tabMenu('#tabMenu1 li');        // selector로 전달
+            tabMenu('#tabMenu2 li');
+            tabMenu('#tabMenu3 li');
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>첫번째 탭메뉴</p>
+    <ul class="tab-menu" id="tabMenu1">
+        <li class="menuitem1">google</li>
+        <li class="menuitem2">facebook</li>
+        <li class="menuitem3">pinterest</li>
+        <li class="menuitem4">twitter</li>
+        <li class="menuitem5">airbnb</li>
+        <li class="menuitem6">path</li>
+    </ul>
+    <p>두번째 탭메뉴</p>
+    <ul class="tab-menu" id="tabMenu2">
+        <li class="menuitem1">google</li>
+        <li class="menuitem2">facebook</li>
+        <li class="menuitem3">pinterest</li>
+        <li class="menuitem4">twitter</li>
+        <li class="menuitem5">airbnb</li>
+        <li class="menuitem6">path</li>
+    </ul>
+    <p>세번째 탭메뉴</p>
+    <ul class="tab-menu" id="tabMenu3">
+        <li class="menuitem1">google</li>
+        <li class="menuitem2">facebook</li>
+        <li class="menuitem3">pinterest</li>
+        <li class="menuitem4">twitter</li>
+        <li class="menuitem5">airbnb</li>
+        <li class="menuitem6">path</li>
+    </ul>
+</body>
+
+</html>

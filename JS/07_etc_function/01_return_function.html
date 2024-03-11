@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 리턴값으로 함수객체를 변환
+        함수 안에 있는 내부 함수를 밖에서 사용할 수 있도록 리턴할 수 있다.
+        내부함수(inner function) or 중첩함수(overlap function)이라고 부른다. */
+        let createHello = function(){
+            let hello = function(user){
+                console.log(`${user}님 방문을 환영합니다.`);
+            }
+
+            return hello;
+        }
+
+        let result = createHello();
+        result('홍길동');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

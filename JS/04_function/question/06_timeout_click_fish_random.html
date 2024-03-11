@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .panel{
+        .panel {
             width: 600px;
             height: 400px;
             border: 2px solid black;
             position: relative;
         }
-        .panel #fish{
+
+        .panel #fish {
             position: absolute;
             left: 250px;
             top: 150px;
@@ -20,13 +22,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let count = 1;
-            const INTERVAL = 5000;
+            const INTERVAL = 10000;
+            const FISHINTERVAL = 1000;
             let isPlaying = true;
             let $score = document.querySelector('#score');
             let $fish = document.querySelector('#fish');
 
+            function fishRandom() {
+                setInterval(() => {
+                    let x = Math.random() * 500;
+                    let y = Math.random() * 300;
+
+                    $fish.style.left = x + 'px';
+                    $fish.style.top = y + 'px';
+                }, FISHINTERVAL);
+            };
+
+            // fishRandom();
+
             $fish.addEventListener('click', () => {
-                if(isPlaying){
+                if (isPlaying) {
                     $score.textContent = count++;
                 }
             });
@@ -38,17 +53,21 @@
         });
     </script>
 </head>
+
 <body>
     <div>현재 점수 <span id="score">0</span></div>
     <div class="panel">
         <img src="../../../images2/fish.png" id="fish">
     </div>
 </body>
+
 </html>
 
 <!-- 
 물고기를 상자 안에 띄우고
 물고기를 5초 안에 최대한 클릭할 것
 클릭한 횟수가 상자 위에 출력될 것
-5초가 지나면 더 이상 클릭 횟수 증가하지 않음. 
+5초가 지나면 더 이상 클릭 횟수 증가하지 않음.
+
+물고기는 0.2초마다 위치를 옮겨다닐 것. 
 -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* count는 지역번수이다.
+        하지만 내부함수(중첩함수)에 의해 사용된다.
+        이때 javascript는 count를 startHello()호출이 끝났다고 제거하지 않는다.
+        이것을 '클로저'라고 부르고
+        setInterval내의 '익명함수'를 '클로저 함수'라고 부른다.
+        이렇게 함수 내에서 값을 유지하게 하기 위해서는 지역변수를 참조하는
+        '클로저 함수'를 만들어서 사용할 수 있다. */
+        let startHello = function(){
+            let count = 0;
+
+            setInterval(function(){
+                count++;
+                console.log(`${count} 안녕하세요`);
+            }, 1000);
+        }
+
+        startHello();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 익명함수 리터럴 방식 함수 선언은 '호이스팅'이 일어나지 않는다.
+        위에서 아래의 흐름대로 사용하게 된다. */
+
+        let anonym;
+
+        anonym = function(){
+            console.log('1번째 익명함수 입니다.')
+        }
+
+        anonym = function(){
+            console.log('2번째 익명함수 입니다.')
+        }
+        
+        anonym();       // 2번째 익명함수 입니다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

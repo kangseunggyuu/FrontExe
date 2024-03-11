@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let createCounter = function () {
+            let count = 0;
+
+            let addCount = function () {
+                return ++count;
+            }
+
+            return addCount;
+        }
+
+        let counter = createCounter();
+        
+        console.log(`count=${counter()}`);
+        console.log(`count=${counter()}`);
+        console.log(`count=${counter()}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

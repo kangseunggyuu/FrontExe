@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* var와 같은 '호이스팅'은 동작하지 않고
+        위에서 아래의 흐름대로 프로그래밍을 처리할 수 있다. */
+        
+        console.log(i);     // Uncaught ReferenceError: Cannot access 'i' before initialization
+        let i;
+        console.log(i);     // undefined
+        i = 10;
+        console.log(i);     // 10
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

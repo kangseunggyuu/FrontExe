@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 선언적 함수는 가장 먼저 메모리 로딩된다.
+        이것을 '호이스팅'이라고 한다.
+        그러므로 아래에 선언된 함수를 위에서 사용할 수 있다. */
+
+        declare();
+
+        function declare(){
+            console.log('1번째 익명함수 입니다.')
+        }
+
+        function declare(){
+            console.log('2번째 익명함수 입니다.')       // '호이스팅'으로 인하여 첫번째 내용을 덮음.
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

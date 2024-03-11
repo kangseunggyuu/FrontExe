@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        a = 1;
+
+        var aaa;
+
+        /* 함수가 아닌 블록에 생긴 변수를
+        다른 언어(C, C++, C#, Java, ...)에서는 지역변수를 사용해서 블록 벗어나면 소멸되는데
+        자바스크립트는 함수일 경우만 '지역변수'로 동작하고,
+        함수가 아닌 블록에서는 '전역변수'로 잡히게 된다.
+        
+        
+        => 프로젝트 규모가 커질 경우 의도치 않게 동일한 네이밍 변수가 종종 발생하게 된다.
+        그리고 var의 특성상 변수의 타입을 바꾸거나 값을 덮어쓰는 일이 종종 생긴다.
+        그래서 var 대신 let, const가 나오게 되었다. */
+        if(a===1){
+            var n = '홍길동';
+        }
+
+        {
+            var nnn = '임꺽정';
+        }
+
+        console.log('a=' + a);
+        console.log('aaa=' + aaa);      // undefined, 변수는 존재하지만 타입이 결정되지 않음
+        console.log('n=' + n);          // 
+        console.log('nnn=' + nnn);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
