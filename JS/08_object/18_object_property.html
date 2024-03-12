@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const object = {
+            name: '홍길동',
+            job: '활빈당',
+            age: 24
+        };
+
+        // 속성이 존재하면 그대로 사용, 없으면 추가
+        object.name = object.name !== undefined ? object.name : '무직';
+        object.money = object.money !== undefined ? object.money : '100억';
+
+        console.log(object);
+
+        object.name = object.name || '무직';
+        object.tech = object.tech || 'Java, javascript';
+
+        console.log(object);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const student = {};
+
+        // 속성 추가
+        student.이름 = '홍길동';
+        student.직업 = '의적';
+        student.취미 = '어려운 사람 돕기';
+        student.재능 = '도술';
+
+        console.log(student['이름']);
+        console.log(student['직업']);
+        console.log(student['취미']);
+        console.log(student['재능']);
+        console.log('');
+
+        // 속성 제거
+        delete student.직업;
+
+        // json문자열로 변경하기
+        let str = JSON.stringify(student);
+        console.log(str);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

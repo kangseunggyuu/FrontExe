@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const pet = {
+            name: '뽀삐',
+            age: 6,
+            color: '하얀색'
+        };
+
+        // pet은 상수변수이므로 이미 참조값이 고정화되므로 다른 객체를 할당할 수 없다.
+        /*
+        pet = {
+            나이: 24,
+            이름: '홍길동'
+        }
+        */
+       
+        const star = pet;           // 참조값 복사로 같은 객체를 가리키게 된다.
+
+        star.name = '별';
+        star.age = 3;
+        star.color = '얼룩이';
+
+        console.log(pet);
+        console.log(star);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

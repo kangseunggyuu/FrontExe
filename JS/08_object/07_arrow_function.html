@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        화살표 함수는 callback함수로 많이 쓰이지만
+                     객체의 메서드로는 잘 안쓰인다.
+        일반 함수는 둘 다 사용된다.
+
+        객체의 메서드로는 주로 '일반 함수'를 사용한다.
+        */
+
+        const test = {
+            // 일반 함수의 this는 객체를 가리킨다.
+            a: function(){
+                console.log(this);
+            },
+
+            // 화살표 함수의 this는 여기서 window객체를 가리킨다.
+            b: () => {
+                console.log(this);
+            }
+        }
+
+        test.a();
+        test.b();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

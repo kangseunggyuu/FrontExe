@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const h1 = (text) => `<h1>${text}</h1>`;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('1번째 DOMContentLoaded 이벤트 발생');
+            document.body.innerHTML += h1('1번째 script 태그');
+        });
+
+        /*아래처럼 해도 무방하다.
+          하지만 성능은 'DOMContentLoaded'이 더 좋다고 알려져있다.
+        */
+        window.onload = function(){
+            console.log('2번째 load 이벤트 발생');
+            document.body.innerHTML += h1('2번째 load 이벤트 발생');
+        }
+
+        window.addEventListener('load', function(){
+            console.log('3번째 load 이벤트 발생');
+            document.body.innerHTML += h1('3번째 load 이벤트 발생');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('4번째 DOMContentLoaded 이벤트 발생');
+            document.body.innerHTML += h1('4번째 script 태그');
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

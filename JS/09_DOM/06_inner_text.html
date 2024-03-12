@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const a = document.querySelector('#a');
+            const b = document.querySelector('#b');
+            const c = document.querySelector('#c');
+
+            a.textContent = '<h1>textContent 속성</h1>';    // 문자열 그대로 삽입(최신 브라우저, 성능up)
+            b.innerHTML = '<h1>innerHTML 속성</h1>';        // html요소로 인식하고 삽입
+            c.innerText = '<h1>innerHTML 속성</h1>';        // 문자열 그대로 삽입(과거)
+        });
+    </script>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+</body>
+</html>

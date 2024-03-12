@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [{
+            name: '홍길동',
+            job: '활빈당',
+            age: 24
+        },
+        {
+            name: '머털이',
+            job: '학생',
+            age: 20
+        }];
+
+        // json객체 배열, json객체 => json문자열로 변환
+
+        let jsonStr = JSON.stringify(data);
+        console.log(typeof jsonStr);
+        console.log(jsonStr);
+
+        // 가운데는 사용하지 않으므로 null, 2는 들여쓰기 2칸의 의미
+        jsonStr = JSON.stringify(data, null, 2);
+        console.log(typeof jsonStr);
+        console.log(jsonStr);
+
+        // json문자열 => json객체/json객체 배열
+        const jsonObj = JSON.parse(jsonStr);
+        console.log(typeof jsonObj);
+        console.log(jsonObj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

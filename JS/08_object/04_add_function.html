@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        const의 경우 '기본 타입'인 Number, String, Boolean은 변경할 수 없다.
+        const가 객체를 가리키는 경우도 객체를 다른 객체로 변경할 수는 없다.
+        하지만 가리키는 객체의 내부 속성을 추가/제거하는 것은 얼마든지 가능하다.
+        */
+        const student = {};     // 빈 객체
+
+        student.이름 = '홍길동';
+        student.직업 = '의적';
+        student.취미 = '어려운 사람 돕기';
+        student.재능 = '도술';
+
+        console.log(student['이름']);
+        console.log(student['직업']);
+        console.log(student['취미']);
+        console.log(student['재능']);
+        console.log('');
+        console.log(student.이름);
+        console.log(student.직업);
+        console.log(student.취미);
+        console.log(student.재능);
+        console.log('');
+
+        // json문자열로 변경하기
+        let str = JSON.stringify(student);
+        console.log(str);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

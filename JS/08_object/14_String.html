@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 개행문자, \t, \n과 같은 앞뒤 공백 문자 제거
+        const stringA = '\n메시지를 입력했는데 줄바꿈이 들어갔다.';
+        const stringB = '   앞과 뒤에 공백이 들어갔다    ';
+        console.log(stringA.length);
+        console.log(stringB.length);
+        console.log(stringA.trim().length);
+        console.log(stringB.trim().length);
+
+        // 문자열 자르기 : split()
+        let input = `
+        일자,달러,엔,유로
+        02,1141.8,1077.45,1255,37
+        03,1148.7,1111.36,1274,45
+        04,1140.2,1107.11,1266,26
+        05,1143.1,1099.22,1267,65
+        06,1141.5,1091.33,1261,78
+        `;
+
+        input = input.trim();       // 양쪽 공백문자 제거
+        input = input.split('\n');  // \n 기준으로 잘라서 배열
+        console.log(input);
+
+        input = input.map((line) => line.split(','))
+
+        // map을 사용해서 각 배열 요소의 공백 문자 제거
+        input = input.map(function(line){
+            return line = line.map(function(elem){
+                return elem.trim();
+            });
+        });
+
+        console.log(input);
+        const jsonStr = JSON.stringify(input);
+        console.log(jsonStr);
+
+        /* 
+        // forEach를 사용해서 각 배열 요소의 공백 문자 제거
+
+        let newInput = [];
+        input.forEach(function(line){
+            let temp = [];
+            line.forEach(function(elem){
+                elem = elem.trim();     
+                temp.push(elem);
+            });
+            newInput.push(temp)
+        });        
+        console.log(newInput);
+        const jsonStr = JSON.stringify(newInput);
+        console.log(jsonStr);
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
