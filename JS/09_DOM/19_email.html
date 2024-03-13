@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const input = document.querySelector('input');
+            const p = document.querySelector('p');
+            const isEmail = (value) => {
+                return (value.indexOf('@') >= 1)    // @을 찾아서 위치를 리턴, 위치가 최소 1이상
+                    && (value.split('@')[1].indexOf('.') >= 1); // @을 기준으로 뒤의 문자열중에 .의 위치 리턴
+            }
+
+            input.addEventListener('keyup', (event) => {
+                const value = event.currentTarget.value;
+                if(isEmail(value)){
+                    p.style.color = 'green';
+                    p.textContent = `이메일 형식입니다: ${value}`;
+                }else{
+                    p.style.color = 'red';
+                    p.textContent = `이메일 형식이 아닙니다: ${value}`;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text">
+    <p></p>
+</body>
+</html>

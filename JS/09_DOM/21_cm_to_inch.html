@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let nowVal;
+            let chgVal = 10;        // 단위 변환 상수
+
+            const select = document.querySelector('select');
+            const input = document.querySelector('input');
+            const span = document.querySelector('span');
+
+            const calculate = () => {
+                span.textContent = (nowVal * chgVal).toFixed(2);
+            }
+
+            select.addEventListener('change', (event)=>{
+                const options = event.currentTarget.options;
+                const index = event.currentTarget.options.selectedIndex;
+                chgVal = Number(options[index].value)
+                calculate();
+            });
+
+            input.addEventListener('keyup', (event)=>{
+                nowVal = Number(event.currentTarget.value);
+                calculate();
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="text"> cm = <span></span>
+    <select>
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.363701">inch</option>
+    </select>
+</body>
+</html>

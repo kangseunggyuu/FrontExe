@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const divide = function (a, b) {
+            if (b === 0){
+                const error = new Error();
+                error.name = '0으로 나눈 에러!!!';
+                error.message = '0으로 나눌 수 없습니다.';
+                throw error;
+            }
+
+            return a / b;
+        }
+
+        try {
+            console.log(divide(10, 2));
+            console.log(divide(10, 0));
+        } catch (exception) {
+            console.log('예외 이름 : ' + exception.name);
+            console.log('예외 메시지: ' + exception.message);
+            console.log('예외 위치: ' + exception.stack);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

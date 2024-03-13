@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const imgs = document.querySelectorAll('img');
+
+            imgs.forEach((img)=>{
+                img.addEventListener('contextmenu', (event)=>{
+                    event.preventDefault();     // 해당 태그의 기본 동작을 막는다.
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="http://placekitten.com/300/300">
+</body>
+</html>

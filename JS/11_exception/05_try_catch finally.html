@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        try~catch구문에서 성공이든 예외발생이든
+        반드시 마무리 지어야 하는 코드는 finally구문에 작성하면 된다.
+        */
+
+        // 예외가 발생하지 않는 상황
+        try{
+            const result = 10 + 20;
+            console.log('1번째 코드 수행 완료~');
+        }catch(exception){
+            console.log('1번째 catch 에서 예외 얻음');
+        }finally{
+            console.log('1번째 finally');
+        }
+
+        // 예외가 발생하는 상황
+        try{
+            willExcept.happy();
+            console.log('2번째 코드 수행 완료~');
+        }catch(exception){
+            const output = `${exception.message}\n${exception.stack}`;
+            console.log(`2번째 catch 에서 예외 얻음 - ${output}`);
+        }finally{
+            console.log('2번째 finally');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

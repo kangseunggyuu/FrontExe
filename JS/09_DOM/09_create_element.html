@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            for (let i = 0; i < 10; i++) {
+                // h1 요소 생성
+                const header = document.createElement('h1');
+
+                let val1 = parseInt(Math.random() * 256);  // 0 ~ 255
+                let val2 = parseInt(Math.random() * 256);  // 0 ~ 255
+                let val3 = parseInt(Math.random() * 256);  // 0 ~ 255
+
+                // 스타일 지정
+                header.textContent = '문서 객체 동적으로 생성하기-' + i;
+                header.setAttribute('data-custom', '사용자 정의 속성');
+                header.style.color = `rgb(${val1}, ${val2}, ${val3})`;
+                header.style.backgroundColor = `rgb(${255-val1}, ${255-val2}, ${255-val3})`;
+
+                // body의 자식으로 추가
+                document.body.appendChild(header);
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
