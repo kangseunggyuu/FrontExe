@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Square{
+            // 필드나 메소드에 #을 붙여주면 private으로 사용
+            #length;
+w
+            constructor(length){
+                if(length <= 0)
+                throw '길이는 0보다 커야합니다';
+
+                this.#length = length;
+            }
+
+            getPerimeter(){
+                return 4 * this.#length;
+            }
+
+            getArea(){
+                return this.#length * this.#length;
+            }
+        }
+
+        const square = new Square(10);
+        // square.#length = -100;       // 접근이 안됨.
+        square.length = -100;           // private속성으로 외부값이 반영되지 않음.
+        console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+        console.log(`정사각형의 넓이: ${square.getArea()}`);
+        console.log(square.length);     // 동적 추가한 length필드
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

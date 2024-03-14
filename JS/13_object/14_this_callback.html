@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var value = 1;      // window객체내에 생성되는 전역변수
+
+        const any = {
+            value: 100,
+            foo() {
+                console.log("foo's this=", this);                   // this === any
+                console.log("foo's this.value=", this.value);       // 100
+
+                // 화살표 함수는 자신을 호출한 상위함수의 this를 물려받는다.
+                // bind하지 않아도 this가 전달된다.
+                setTimeout(()=>{
+                    console.log("callback's this=", this);              // this === any             
+                    console.log("callback's this.value=", this.value);  // 1;     
+                }, 100);
+            }
+        };
+
+        any.foo();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student{
+            // 생성자 함수
+            constructor(name, kor, math, eng, sci){
+                this.name = name;
+                this.kor = kor;
+                this.math = math;
+                this.eng = eng;
+                this.sci = sci;
+            }
+
+            getSum(){
+                return this.kor + this.math + this.eng + this.sci;
+            }
+
+            getAverage(){
+                return this.getSum()/4;
+            }
+
+            toString(){
+                return `${this.name}\t${this.getSum()}점\t${this.getAverage()}점\n`;
+            }
+        }
+
+        const students = [
+            new Student('홍길동', 99, 80, 34, 89),
+            new Student('임꺽정', 44, 23, 52, 56),
+            new Student('장길산', 55, 77, 22, 25),
+            new Student('일지매', 78, 25, 89, 89)
+        ]
+
+        let output = '이름\t총점\t평균\n';
+        for(const s of students)
+            output += s;            // s.toString();
+
+        console.log(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

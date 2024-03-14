@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        [화살표 함수와 일반 함수의 차이]
+        1) 화살표 함수는 인스턴스를 생성할 수 없다.
+          즉, 생성자 함수를 만들 수 없다.
+        */
+       //const Foo = () => {};
+       //new Foo();   // Uncaught TypeError: Foo is not a constructor
+
+       /*
+       2) 화살표 함수는 함수 자체의 this 바인딩을 가지지 않는다.
+          상위 스코프의 this를 가져온다.
+          가장 큰 차이점은 this다.
+       */
+
+       class Prefixer {
+            constructor(prefix){
+                this.prefix = prefix;
+            }
+            add(arr){
+                // 콜백함수 === 일반 함수로 동작, this === window
+                return arr.map(function(item){
+                    // Uncaught TypeError: Cannot read properties of undefined (reading 'prefix')
+                    return this.prefix + item;
+                });
+            }
+       }
+
+       const prefixer = new Prefixer('-webkit-');
+       console.log(prefixer.add(['trasition', 'user-select']));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

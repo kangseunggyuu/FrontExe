@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Square{
+
+            // 클래스 소속, 객체별로 생기지 않고 클래스에 1개만 생성, 클래스를 통해서 호출
+            // 일반 필드/메소드는 객체가 생성될 때 메모리에 올라가지만
+            // static은 클래스 선언만 있어도 메모리에 올라간다.
+            static #counter = 0;
+            static get counter(){
+                return Square.#counter;
+            }
+            
+            static perimeterOf(length){
+                return length * 4;      // 지역변수 length
+            }
+
+            static areaOf(length){
+                return length * length;        // 지역변수 length
+            }
+
+            // 객체별로 각각 1개씩 생성되는 필드 변수
+            #length;
+
+            constructor(length){
+                this.length = length;
+                Square.#counter++;      // 객체가 생성될 때마다 숫자 증가, #counter는 객체 소속이 아님
+            }
+            // setter
+            set length(value){
+                if(value <= 0)
+                    throw '길이는 0보다 커야 합니다.';
+
+                this.#length = value;
+            }
+            // getter
+            get length(){
+                return this.#length;
+            }
+            get perimeter(){
+                return 4 * this.#length;
+            }
+            get area(){
+                return this.#length * this.#length;
+            }
+        }
+
+        /* static 변수는 클래스에 단 1개만 생성되므로
+        모든 객체가 공유해서 사용하는 것으로 주로 사용된다.
+        static 함수는 객체가 만들어지기 전에 이미 메모리에 올라가고
+        주로 공통기능을 구현할 때 사용된다.
+        객체를 만들지 않아도 바로 호출될 수 있는 utility성 함수를 만들 때 주로 사용한다. */
+
+        const squareA = new Square(10);
+        const squareB = new Square(20);
+        const squareC = new Square(30);
+        console.log('지금까지 생성된 square의 인스턴스 갯수는' + Square.counter + '개 입니다.')
+        console.log('한 변의 길이가 20인 정사각형의 둘레는' + Square.perimeterOf(20) + '입니다.')
+        console.log('한 변의 길이가 30인 정사각형의 넓이는' + Square.areaOf(30) + '입니다.')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

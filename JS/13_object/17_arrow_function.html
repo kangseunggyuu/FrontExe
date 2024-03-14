@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       class Prefixer {
+            constructor(prefix){
+                this.prefix = prefix;
+            }
+            add(arr){
+                // 콜백함수에서 객체를 접근하려면 다른 지역변수를 사용해서 this를 접근하도록 한다.
+                const that = this;
+                return arr.map(function(item){
+                    return that.prefix + item;
+                });
+            }
+       }
+
+       const prefixer = new Prefixer('-webkit-');
+       console.log(prefixer.add(['trasition', 'user-select']));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

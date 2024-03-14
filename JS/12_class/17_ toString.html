@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Any{
+            constructor(name){
+                this.name;
+            }
+        }
+
+        class Pet{
+            constructor(name, age){
+                this.name;
+                this.age;
+            }
+            
+            toString(){
+                return '이름: ' + this.name + '\n' + '나이: ' + this.age + '살';
+            }
+        }
+
+        // toString()을 오버라이딩 하지 않았을 때
+        const any = new Any('홍길동');
+        alert(any);
+        console.log(any + '');
+
+        // toString()을 오버라이딩 했을 때
+        const pet = new Pet('독구', 4);
+        alert(pet);
+        console.log(pet + '');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

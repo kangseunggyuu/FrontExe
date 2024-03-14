@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class LifeCycle{
+            call(){
+                this.a();
+                this.b();
+                this.c();
+            }
+            a(){console.log('a() 메소드를 호출');}
+            b(){console.log('b() 메소드를 호출');}
+            c(){console.log('c() 메소드를 호출');}
+        }
+
+        new LifeCycle().call();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

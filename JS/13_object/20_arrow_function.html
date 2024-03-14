@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       class Prefixer {
+            constructor(prefix){
+                this.prefix = prefix;
+            }
+            add(arr){
+                // 화살표 함수는 상위 scope의 this를 자신의 this로 여긴다.
+                // 화살표 함수는 콜백 함수 전용, 함수형 프로그래밍의 역할로 탄생
+                return arr.map((item)=>{
+                    return this.prefix + item;
+                });
+            }
+       }
+
+       const prefixer = new Prefixer('-webkit-');
+       console.log(prefixer.add(['trasition', 'user-select']));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

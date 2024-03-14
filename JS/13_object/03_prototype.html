@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Circle(radius){
+            this.radius = radius;
+
+            /* prototype에 메소드를 만들면
+            1개의 메소드가 생성되고
+            객체에서는 이 메소드를 공유하게 된다.
+            즉, 객체 별로 따로 생성되지 않는다. */
+            Circle.prototype.getArea = function(){
+                return Math.PI * this.radius ** 2;
+            }
+        }
+
+        const circle1 = new Circle(3);
+        const circle2 = new Circle(5);
+        
+        console.log(circle1.getArea === circle2.getArea);       // true
+        console.log(circle1.getArea());
+        console.log(circle2.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

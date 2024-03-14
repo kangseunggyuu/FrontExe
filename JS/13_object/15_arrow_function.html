@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 화살표 함수(arrow function) : 함수 선언문X, 함수 표현식
+        const mul = (x, y) => x * y;
+        console.log(mul(2, 3));
+
+        const multiply = (x, y) => { return x*y; }
+        console.log(multiply(4, 5));
+
+        // 인자가 1개면 매개변수 () 생략 가능
+        const square = x => x ** 2;
+        console.log(square(5));
+
+        // 매개변수가 없는 경우는 ()를 반드시 써야 한다.
+        const getName = () => '홍길동';
+        console.log(getName());
+
+        // 함수 선언문은 에러, 표현식(수식)만 가능하다.
+        // const arrow = () => const x = 1;        // Syntax Error
+
+        // 객체 리터럴을 반환하는 경우 ()로 감싸줘야 한다.
+        // ()를 감싸지 않으면 객체로 인식되지 않고, 함수의 시작/끝으로 해석한다.
+        const create = (id, content) => ({id, content});
+        console.log(create('a', 'abc'))
+
+        const create1 = (id, content) => {id, content};
+        console.log(create1('a', 'abc'))        // undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

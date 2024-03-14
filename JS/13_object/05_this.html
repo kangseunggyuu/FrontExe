@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* this는 객체를 가리키는 값이다. */
+        function Circle(radius){
+            this.radius = radius,
+            
+            Circle.prototype.getDiameter = function(){
+                return 2 * this.radius;
+            }
+        }
+
+        console.log(Circle().getDiameter());
+        console.log(Circle().getDiameter());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

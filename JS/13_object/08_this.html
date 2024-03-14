@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const foo = function(){
+            console.log(this);
+        }
+
+        foo();      // window
+
+        // 다른 객체의 멤버로 함수가 들어갔을 경우
+        const obj = {foo};
+
+        obj.foo();      // 자신을 감싸고 있는 this가 obj를 가리킨다.
+
+        // foo를 생성자 함수로 사용하게 되면
+        new foo();      // this가 생성된 객체를 가리킨다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

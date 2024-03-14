@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var value = 1;
+
+        const any = {
+            value: 100,
+            foo(){
+                console.log("foo's this=", this)                    // this === any
+                console.log("foo's this.value=", this.value);       // any
+
+                // 메소드 내의 중첩함수(내부함수)
+                function bar(){
+                    console.log("bar's this=", this);               // this === window
+                    console.log("bar's this.value=", this.vaule);   // 1
+                }
+
+                bar();
+            }
+        }
+
+        any.foo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

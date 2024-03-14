@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(this);      // 전역영역에서는 this는 window객체, var전역변수 저장되는 곳
+
+        // 일반 함수의 this === window 객체
+        (function square(number){
+            console.log('this=' + this);
+            console.log(this);
+            return number * number;
+        })(2);
+
+        // 객체 내부 메소드에서 this는 객체 자신을 가리킨다.
+        const person = {
+            name: 'Lee',
+            getName(){
+                console.log('this=' + this);
+                console.log(this);
+                return this.name;
+            }
+        }.getName();
+
+        // 생성자 내부에서도 this는 각각의 객체 자신을 가리킨다.
+        function Person(name){
+            this.name = name;
+            console.log(this);
+        }
+        new Person('LEE');
+        new Person('KIM');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

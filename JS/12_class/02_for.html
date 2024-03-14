@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const students = [];
+
+        students.push({name: '홍길동', kor: 94, math: 100, eng:80, sci:88});
+        students.push({name: '임꺽정', kor: 88, math: 97, eng:85, sci:79});
+        students.push({name: '장길산', kor: 89, math: 96, eng:82, sci:81});
+        students.push({name: '강승규', kor: 60, math: 88, eng:96, sci:60});
+
+        let output = '이름\t총점\t평균\n';
+        for(const s of students){
+            const sum = s.kor + s.eng + s.math +s.sci;
+            const average = sum / 4;
+            output += `${name}\t${sum}점\t${average}점\n`;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
