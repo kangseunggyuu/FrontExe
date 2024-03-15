@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/websocketclient.js"></script>
+    <script>
+        let userId = '';        // id 보관용
+
+        const sendLogIn = function(){
+            const id = document.querySelector('#idInput').value;
+            const pass = document.querySelector('#passInput').value;
+            userId = id;        // 나중에 msg전송 때 사용하기 위해
+            const packet = {
+                cmd: 'login',
+                id:id,
+                pass:pass
+            };
+            const jsonStr = JSON.stringify(packet);     // js객체 -> json문자열
+            sendMessage(jsonStr);
+        }
+        const sendChatMsg = function(){
+            const message = document.querySelector('#messageInput').value;
+            const packet = {
+                cmd: 'allchat',
+                id:userId,
+                msg:message
+            }
+            const jsonStr = JSON.stringify(packet);     // js객체 -> json문자열
+            sendMessage(jsonStr);
+        }
+
+        document.addEventListener('DOMContentLoaded', ()=>{
+
+            const btnLogIn = document.querySelector('#btnLogIn');
+            const btnChagMsg = document.querySelector('#btnChatMsg');
+
+            btnLogIn.addEventListener('click', sendLogIn);
+            btnChagMsg.addEventListener('click', sendChatMsg);
+        });
+    </script>
+</head>
+<body>
+    <h2>WebSocket 클라이언트</h2>
+    <label>아이디: <input type='text' id='idInput' placeholder='id를 입력하세요'></label><br>
+    <label>패스워드: <input type='password' id='passInput' placeholder='pass를 입력하세요'></label><br>
+    <button id='btnLogIn'>로그인 전송</button>
+    <hr>
+    <input type="text" id="messageInput" placeholder="메시지를 입력하세요">
+    <button id='btnChatMsg'>채팅 메시지 전송</button>
+    <div id="messages">
+        <!-- 메시지 출력 영역 -->
+    </div>
+</body>
+</html>

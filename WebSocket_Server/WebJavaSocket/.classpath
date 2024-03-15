@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/Java-WebSocket-1.5.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/json-20240303.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/slf4j-api-2.0.12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
