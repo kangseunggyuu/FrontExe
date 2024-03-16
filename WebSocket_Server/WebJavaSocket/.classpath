@@ -6,8 +6,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/Java-WebSocket-1.5.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/json-20240303.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Lecture/FrontExe/WebSocket_Server/lib/slf4j-api-2.0.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/BitCamp/FrontExe/WebSocket_Server/lib/Java-WebSocket-1.5.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/BitCamp/FrontExe/WebSocket_Server/lib/json-20240303.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/BitCamp/FrontExe/WebSocket_Server/lib/slf4j-api-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/BitCamp/FrontExe/WebSocket_Server/lib/mysql-connector-j-8.0.33.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -30,7 +30,7 @@ public class SimpleWebSocketServer extends WebSocketServer{
 	@Override
 	public void onError(WebSocket conn, Exception ex) {
 		System.out.println(ex.getMessage());
-		//ex.getStackTrace();
+		// ex.getStackTrace();
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class SimpleWebSocketServer extends WebSocketServer{
 			ackObj.put("cmd", "allchat");
 			ackObj.put("result", "ok");
 			conn.send(ackObj.toString());
-			
+			System.out.println(this);
 			// 전체 접속자한테 브로드캐스팅
 			for(WebSocket con : this.getConnections()) {
 				if(conn != con)			// 나를 제외한 모든 접속자한테 전송
